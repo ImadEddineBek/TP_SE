@@ -5,7 +5,7 @@ public class Mythread2 implements Runnable {
     }
 
     public static void main(String[] args) {
-     Thread thread = new Thread(new Mythread2());
-     thread.start();
+     Thread thread1 = new Thread(new Mythread2());
+     thread1.start();
     }
 }

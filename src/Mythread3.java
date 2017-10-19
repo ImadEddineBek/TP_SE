@@ -30,6 +30,11 @@ public class Mythread3 extends Thread {
                 e.printStackTrace();
             }
             exit_Section();
+            try {
+                siesta();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         } while (true);
     }
 

@@ -49,7 +49,6 @@ public class CriticalSectionProblemSwap extends Thread
             criticalSection();
             exit_Section();
             siesta();
-            remainderSection();
         } while (true);
     }
 

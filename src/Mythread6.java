@@ -40,6 +40,7 @@ public class Mythread6 extends Thread {
             criticalSection();
             exit_Section();
             remainder_Section();
+            siesta();
         } while (true);
     }
 

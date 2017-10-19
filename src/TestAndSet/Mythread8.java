@@ -42,7 +42,7 @@ public class Mythread8 extends Thread {
             entry_Section();
             criticalSection();
             exit_Section();
-            remainderSection();
+            siesta();
 
     } while(true);
 }

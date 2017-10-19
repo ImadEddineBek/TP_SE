@@ -27,7 +27,6 @@ public class Mythread4 extends Thread {
         System.out.println("Process OutSide:" + id);
         turn = 1 - id;
     }
-
     public void run() {
         do {
             entry_Section();

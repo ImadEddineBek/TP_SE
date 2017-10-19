@@ -34,6 +34,7 @@ public class Mythread5 extends Thread {
             entry_Section();
             criticalSection();
             exit_Section();
+            siesta();
         } while (true);
     }
 

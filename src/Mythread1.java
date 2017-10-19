@@ -5,7 +5,7 @@ public class Mythread1 extends Thread{
     }
 
     public static void main(String[] args) {
-        Mythread1 mythread1 = new Mythread1();
-        mythread1.start();
+        Mythread1 mythread = new Mythread1();
+        mythread.start();
     }
 }

@@ -23,7 +23,7 @@ public class Mythread7 extends Thread {
     }
 
     public void exit_Section() {
-        System.out.println(" Outside Critical  Section Process  :" + id);
+        System.out.println(" Outside Process  :" + id);
         occupied = false;
     }
 
@@ -32,6 +32,7 @@ public class Mythread7 extends Thread {
             entry_Section();
             criticalSection();
             exit_Section();
+            siesta();
         } while (true);
     }
 
