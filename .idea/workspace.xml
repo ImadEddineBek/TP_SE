@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2919ea6e-6cb1-4603-b43f-bb02f493e9b1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TP_SE/Mythread4.class" afterPath="$PROJECT_DIR$/out/production/TP_SE/Mythread4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TP_SE/Mythread7.class" afterPath="$PROJECT_DIR$/out/production/TP_SE/Mythread7.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mythread1.java" afterPath="$PROJECT_DIR$/src/Mythread1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mythread2.java" afterPath="$PROJECT_DIR$/src/Mythread2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mythread3.java" afterPath="$PROJECT_DIR$/src/Mythread3.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mythread4.java" afterPath="$PROJECT_DIR$/src/Mythread4.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mythread5.java" afterPath="$PROJECT_DIR$/src/Mythread5.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mythread6.java" afterPath="$PROJECT_DIR$/src/Mythread6.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Mythread7.java" afterPath="$PROJECT_DIR$/src/Mythread7.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Swap/CriticalSectionProblemSwap.java" afterPath="$PROJECT_DIR$/src/Swap/CriticalSectionProblemSwap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TestAndSet/Mythread8.java" afterPath="$PROJECT_DIR$/src/TestAndSet/Mythread8.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -386,12 +377,20 @@
       <workItem from="1507792617162" duration="142000" />
       <workItem from="1507824873478" duration="1274000" />
       <workItem from="1508057598367" duration="230000" />
-      <workItem from="1508404562961" duration="6852000" />
+      <workItem from="1508404562961" duration="6873000" />
     </task>
+    <task id="LOCAL-00001" summary="First try">
+      <created>1508435862193</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1508435862193</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10483000" />
+    <option name="totallyTimeSpent" value="10504000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -431,6 +430,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First try" />
+    <option name="LAST_COMMIT_MESSAGE" value="First try" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
