@@ -43,7 +43,7 @@ public class DeckerSolution extends Thread {
             exit_Section();
             remainder_Section();
             siesta();
-        } while (id!=0);
+        } while (true);
     }
 
     public static void main(String[] args) {
