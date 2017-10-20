@@ -16,6 +16,7 @@ public class FlagsSolution extends Thread {
     }
 
     public void entry_Section() {
+        siesta();
         flag[id] = true;
         while (flag[1 - id]) siesta();
     }
