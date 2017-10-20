@@ -10,7 +10,6 @@ public class TurnSolution extends Thread {
 
     public void siesta() {
         try {
-            System.out.println(" Inside Siesta Section Process  :" + id);
             sleep((int) (Math.random() * 500));
         } catch (InterruptedException e) {
         }
@@ -34,7 +33,7 @@ public class TurnSolution extends Thread {
             entry_Section();
             criticalSection();
             exit_Section();
-        } while (id!=1);
+        } while (true);
     }
 
     public static void main(String[] args) {
