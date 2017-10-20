@@ -1,43 +1,55 @@
-public class Mythread4 extends Thread {
-    private int id;
-    private volatile static int turn = 0;
+package b_mistakes;
 
-    public Mythread4(int id) {
+public class DeckerSolution extends Thread {
+    private int id;
+    private static int turn;
+    private static boolean[] flag = new boolean[2];
+
+    public DeckerSolution(int id) {
         this.id = id;
+
     }
 
     public void siesta() {
         try {
-            System.out.println(" Inside Siesta Section Process  :" + id);
             sleep((int) (Math.random() * 500));
         } catch (InterruptedException e) {
         }
     }
 
     public void entry_Section() {
-        while (id != turn) siesta();
+        flag[id] = true;
+        turn = 1 - id;
+        while (flag[1 - id] && turn == 1 - id) siesta();
     }
 
     public void criticalSection() {
-        System.out.println(" Inside Critical Section Process  :" + id);
+        System.out.println(" Inside Critical  Section Process  :" + id);
         siesta();
     }
 
     public void exit_Section() {
         System.out.println("Process OutSide:" + id);
-        turn = 1 - id;
+        flag[id] = false;
+    }
+
+    public void remainder_Section() {
+        if (id==0)siesta();
     }
     public void run() {
         do {
             entry_Section();
             criticalSection();
             exit_Section();
-        } while (id!=1);
+            remainder_Section();
+            siesta();
+        } while (true);
     }
 
     public static void main(String[] args) {
         for (int i = 0; i <2;i++){
-            Mythread4 process = new Mythread4(i);
+            DeckerSolution process = new DeckerSolution(i);
             process.start();
         }
-    }}
+    }
+}

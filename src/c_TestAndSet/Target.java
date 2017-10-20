@@ -1,4 +1,4 @@
-package TestAndSet;
+package c_TestAndSet;
 
 public class Target {
     private volatile boolean target = false;

@@ -1,3 +1,5 @@
+package a_Creation;
+
 public class Mythread2 implements Runnable {
     @Override
     public void run() {

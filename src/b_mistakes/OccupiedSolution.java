@@ -1,7 +1,9 @@
-public class Mythread7 extends Thread {
+package b_mistakes;
+
+public class OccupiedSolution extends Thread {
     public volatile static boolean occupied ;
     int id;
-    public Mythread7(int id) {
+    public OccupiedSolution(int id) {
         this.id = id;
     }
 
@@ -38,7 +40,7 @@ public class Mythread7 extends Thread {
 
     public static void main(String[] args) {
         for (int i = 0; i <2;i++){
-            Mythread7 process = new Mythread7(i);
+            OccupiedSolution process = new OccupiedSolution(i);
             process.start();
         }
     }

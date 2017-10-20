@@ -1,12 +1,16 @@
-public class Mythread6 extends Thread {
+package d_Swap;
+
+public class CriticalSectionProblemSwap extends Thread
+{
+    private volatile static Lock lock = new Lock();
     private int id;
-    private static int turn;
-    private static boolean[] flag = new boolean[2];
+    private volatile Key key;
 
-    public Mythread6(int id) {
+    public CriticalSectionProblemSwap(int id) {
         this.id = id;
-
+        key = new Key();
     }
+
 
     public void siesta() {
         try {
@@ -16,10 +20,14 @@ public class Mythread6 extends Thread {
     }
 
     public void entry_Section() {
-        flag[id] = true;
-        turn = 1 - id;
-        while (flag[1 - id] && turn == 1 - id) siesta();
+        key.set(true);
+        while (key.get()) {
+//            System.out.println(id);
+            Swap.swap(key, lock);
+            siesta();
+        }
     }
+
 
     public void criticalSection() {
         System.out.println(" Inside Critical  Section Process  :" + id);
@@ -28,26 +36,26 @@ public class Mythread6 extends Thread {
 
     public void exit_Section() {
         System.out.println("Process OutSide:" + id);
-        flag[id] = false;
+        lock.set(false);
     }
 
-    public void remainder_Section() {
-        if (id==0)siesta();
+    public void remainderSection() {
+        siesta();
     }
+
     public void run() {
         do {
             entry_Section();
             criticalSection();
             exit_Section();
-            remainder_Section();
             siesta();
         } while (true);
     }
 
     public static void main(String[] args) {
-        for (int i = 0; i <2;i++){
-            Mythread6 process = new Mythread6(i);
-            process.start();
+        for (int i = 0; i <= 2; i++) {
+            CriticalSectionProblemSwap processI = new CriticalSectionProblemSwap(i);
+            processI.start();
         }
     }
 }

@@ -1,8 +1,10 @@
-public class Mythread5 extends Thread {
+package b_mistakes;
+
+public class FlagsSolution extends Thread {
     private int id;
     private volatile static boolean[] flag = {false, false};
 
-    public Mythread5(int id) {
+    public FlagsSolution(int id) {
         this.id = id;
     }
 
@@ -40,7 +42,7 @@ public class Mythread5 extends Thread {
 
     public static void main(String[] args) {
         for (int i = 0; i <2;i++){
-            Mythread5 process = new Mythread5(i);
+            FlagsSolution process = new FlagsSolution(i);
             process.start();
         }
     }

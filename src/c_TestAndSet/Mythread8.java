@@ -1,4 +1,4 @@
-package TestAndSet;
+package c_TestAndSet;
 
 public class Mythread8 extends Thread {
     private int id;

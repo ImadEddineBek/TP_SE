@@ -1,4 +1,4 @@
-package TestAndSet;
+package c_TestAndSet;
 
 public final class TestAndSet {
     public static synchronized boolean testandSet(Target target) {

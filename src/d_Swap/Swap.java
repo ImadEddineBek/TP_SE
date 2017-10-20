@@ -1,4 +1,4 @@
-package Swap;
+package d_Swap;
 
 public final class Swap {
     public static synchronized void swap(Key key, Lock lock) {
