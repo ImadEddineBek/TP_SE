@@ -18,7 +18,6 @@ public class Mythread8 extends Thread {
 
     public void entry_Section() {
         while (TestAndSet.testandSet(target)) {
-            System.out.println(id);
             siesta();
         }
     }
