@@ -7,36 +7,32 @@ public class CriticalSectionProblem extends Thread {
         this.id = id;
     }
 
-    public void siesta() throws InterruptedException {
-        sleep((int) (Math.random() * 500));
+    public void siesta() {
+        try {
+            sleep((int) (Math.random() * 500));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public void entry_Section() {
     }
 
-    public void criticalSection() throws InterruptedException {
+    public synchronized void criticalSection() {
         System.out.println("      critical Section Process  :" + id);
-        siesta();
-    }
-
-    public void exit_Section() {
         System.out.println("Process OutSide:" + id);
     }
 
-    public void run() {
+    public void exit_Section() {
+
+    }
+
+    public  void run() {
         do {
             entry_Section();
-            try {
-                criticalSection();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            criticalSection();
             exit_Section();
-            try {
-                siesta();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            siesta();
         } while (true);
     }
 

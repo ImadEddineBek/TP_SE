@@ -33,16 +33,11 @@ public class DeckerSolution extends Thread {
         flag[id] = false;
     }
 
-    public void remainder_Section() {
-        if (id==0)siesta();
-    }
     public void run() {
         do {
             entry_Section();
             criticalSection();
             exit_Section();
-            remainder_Section();
-            siesta();
         } while (true);
     }
 
