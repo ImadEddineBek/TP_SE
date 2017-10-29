@@ -1,10 +1,10 @@
-package e_waitNotify;
+package f_semaphore_passive;
 
-
+import java.util.concurrent.Semaphore;
 
 public class CriticalSectionSemaphore extends Thread {
     private int id;
-    private volatile static AttenteActiveSemaphore s = new AttenteActiveSemaphore(1);
+    private volatile static Semaphore s = new Semaphore(1, true);
 
     public CriticalSectionSemaphore(int id) {
         this.id = id;
@@ -19,7 +19,10 @@ public class CriticalSectionSemaphore extends Thread {
     }
 
     public void entry_Section() {
-        s.waitAttenteActive();
+        try {
+            s.acquire();
+        } catch (InterruptedException e) {
+        }
     }
 
     public void criticalSection() {
@@ -27,8 +30,8 @@ public class CriticalSectionSemaphore extends Thread {
     }
 
     public void exit_Section() {
-        s.signalAttenteActive();
         System.out.println("Process OutSide:" + id);
+        s.release();
     }
 
     public void remainderSection() {
@@ -43,17 +46,10 @@ public class CriticalSectionSemaphore extends Thread {
             exit_Section();
             remainderSection();
         } while (true);
-//        if (id ==0) {
-//            System.out.println("hello World "+id);
-//            s.signalAttenteActive();
-//        }else {
-//            s.waitAttenteActive();
-//            System.out.println("hello World "+id);
-//        }
     }
 
     public static void main(String[] args) {
-        for (int i = 0; i <= 1; i++) {
+        for (int i = 0; i <= 10; i++) {
             CriticalSectionSemaphore processI = new CriticalSectionSemaphore(i);
             processI.start();
         }

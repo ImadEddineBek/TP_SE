@@ -24,6 +24,6 @@ public final class AttenteActiveSemaphore {
         if (value > 0) {
             value--;
             return false;
-        } else return true;
+        } return true;
     }
 }
